@@ -37,7 +37,7 @@
             android:id="@+id/etPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PhoneNUmber" />
+            android:hint="Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -56,8 +56,11 @@
         app:layout_constraintVertical_bias="0.413"
         app:srcCompat="@drawable/ic_baseline_date_range_24" />
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etDOB"
+        app:passwordToggleDrawable="@drawable/ic_baseline_date_range_24"
+        app:passwordToggleEnabled="true"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -84,10 +87,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/spNationality"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintHorizontal_bias="0.02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spNationality"
-        app:layout_constraintVertical_bias="0.619"
+        app:layout_constraintVertical_bias="0.38"
         app:srcCompat="@drawable/ic_baseline_flag_24" />
 
     <Spinner
@@ -190,10 +193,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etIdNumber"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
+            android:inputType="textPassword"
             android:layout_height="wrap_content"
-            android:hint="IdNumber" />
+            android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
