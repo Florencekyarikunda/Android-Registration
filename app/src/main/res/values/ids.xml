@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="rvCourses" type="id">rvCourses</item>
+    <item name="tvDateCreated" type="id">tvDateCreated</item>
+    <item name="tvDateUpdated" type="id">tvDateUpdated</item>
+    <item name="tvUpdatedBy" type="id">tvUpdatedBy</item>
+    <item name="tvCourseId" type="id">tvCourseId</item>
+    <item name="tvCoursename" type="id">tvCoursename</item>
+    <item name="tvCourseCode" type="id">tvCourseCode</item>
+    <item name="tvCourseDescription" type="id">tvCourseDescription</item>
+    <item name="tvCreatedBy" type="id">tvCreatedBy</item>
+    <item name="tvInstructor" type="id">tvInstructor</item>
+    <item name="tvActive" type="id">tvActive</item>
 </resources>

@@ -7,13 +7,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.codehiveregistration.CoursesActivity
 import com.example.codehiveregistration.Models.LoginRequest
 import com.example.codehiveregistration.databinding.ActivityLoginBinding
 import android.content.Context
 
 
-class LogIn : AppCompatActivity() {
+class Login : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
     val LoginViewModel:LoginViewModel by viewModels()
     lateinit var sharedPreferences: SharedPreferences
@@ -26,20 +25,20 @@ class LogIn : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             var LoginRequest= LoginRequest(binding.tvEmail.text.toString(),
                 binding.tvPassword.text.toString())
-            LoginViewModel.logIn(LoginRequest)
+            LoginViewModel.Login(LoginRequest)
         }
     }
 
     override fun onResume(){
         super.onResume()
-        LoginViewModel.logInLiveData.observe(this, { logInResponse->
+        LoginViewModel.LoginLiveData.observe(this, { logInResponse->
             Toast.makeText(baseContext, logInResponse.message, Toast.LENGTH_LONG).show()
             var accessToken = logInResponse.accessToken
             sharedPreferences.edit().putString("ACCESS_TOKEN", accessToken).apply()
             var x = sharedPreferences.getString("ACCESS_TOKEN", "")
         })
 
-        LoginViewModel.logInFailedLiveData.observe(this, {error->
+        LoginViewModel.LoginFailedLiveData.observe(this, {error->
             Toast.makeText(baseContext, error, Toast.LENGTH_LONG).show()
             binding.tvLogin.visibility=View.VISIBLE
             binding.tvLogin.text = error

@@ -9,6 +9,6 @@ data class RegistrationResponse(
     @SerializedName("date of_birth") var DOB:String,
     var Nationality:String,
     var Password:String,
-    @SerializedName("Student_id") var StudentId:String
+    @SerializedName("Student_id") var studentId:String
 )
 

@@ -8,6 +8,7 @@ import com.example.codehiveregistration.Models.RegistrationRequest
 import com.example.codehiveregistration.Models.RegistrationResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import okhttp3.Dispatcher
 import retrofit2.Response
 
 class UserRepository {
@@ -17,6 +18,10 @@ class UserRepository {
         var response=apiInterface.RegisterStudent(registrationRequest)
         return@withContext response
     }
-//  suspend fun login(loginRequest: LoginRequest):Response<LoginResponse>
+suspend fun Login(loginRequest: LoginRequest):Response<LoginResponse> =
+    withContext(Dispatchers.IO){
+        var response = apiInterface.loginStudent(LoginRequest)
+        return@withContext response
+    }
 
 }
