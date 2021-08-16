@@ -1,4 +1,4 @@
-package com.example.codehiveregistration
+package com.example.codehiveregistration.Api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -7,7 +7,7 @@ data class RegistrationResponse(
     @SerializedName("phone_number") var PhoneNumber:String,
     var Email:String,
     @SerializedName("date of_birth") var DOB:String,
-    var nationality:String,
+    var Nationality:String,
     var Password:String,
     @SerializedName("Student_id") var StudentId:String
 )

@@ -6,4 +6,5 @@ data class RegistrationRequest(
     var PhoneNumber: String,
     var nationality: String,
     var Password: String,
+    val Email: String,
 )

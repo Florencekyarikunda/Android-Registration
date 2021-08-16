@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHiveRegistration" >
         <activity
-            android:name=".LoginActivity"
+            android:name=".UI.LoginActivity"
             android:exported="true" />
         <activity android:name=".coursesActivity" />
         <activity android:name=".MainActivity" >
