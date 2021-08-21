@@ -36,7 +36,7 @@ class CoursesActivity : AppCompatActivity() {
          CoursesViewModel.CoursesLiveData.observe(this,{CoursesResponse->
 
              if (accessToken!!.isNotEmpty()){
-                 CoursesViewModel.(accessToken)
+                 CoursesViewModel.size(accessToken)
              }
              CoursesViewModel.CoursesLiveData.observe(this,{Courses->
                  Toast.makeText(baseContext,"${CoursesListItemBinding.size} courses fetcher",Toast.LENGTH_LONG).show()

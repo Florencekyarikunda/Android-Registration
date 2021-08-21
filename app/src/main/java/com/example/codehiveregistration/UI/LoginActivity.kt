@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
 //            var accessToken = logInResponse.accessToken
             var editor = sharedPrefs.edit()
 //            sharedPrefs.edit().putString(constants.ACCESS_TOKEN, logInResponse.)
-            editor.putString("ACCESS_TOKEN", logInResponse.acc)
+            editor.putString("ACCESS_TOKEN", logInResponse.accessToken)
             editor.putString(constants."STUDENT_ID" ,logInResponse.accessToken)
             editor.apply()
             //create a session manager

@@ -3,6 +3,7 @@ package com.example.codehiveregistration.Repository
 import com.example.codehiveregistration.Api.ApiClient
 import com.example.codehiveregistration.Api.ApiInterface
 import com.example.codehiveregistration.Models.CoursesResponse
+import com.example.codehiveregistration.Models.EnrolmentResponse
 import com.example.codehiveregistration.UI.Courses
 import com.google.android.gms.cast.framework.SessionManager
 import kotlinx.coroutines.Dispatchers
@@ -17,5 +18,12 @@ class CoursesRepository {
         withContext(Dispatchers.IO){
             var response=apiInterface.studentCourses(token = "Bearer ${sessionManager.fetchAuthentication()}")
             return@withContext response
+        }
+
+
+    suspend fun enrol(accessToken: String): Response<EnrolmentResponse> =
+        withContext(Dispatchers.IO){
+            var enroll = apiInterface.enroll(accessToken)
+            return@withContext enroll
         }
 }
