@@ -15,10 +15,11 @@ class CoursesAdapter (var CourseList:List<Courses>):RecyclerView.Adapter<Courses
     }
 
     override fun onBindViewHolder(holder: CoursesViewHolder, position: Int) { var currentCourse=CourseList.get(position)
-        holder.tvCourseName.text=currentCourse.tvCourseName
-        holder.tvDescription.text=currentCourse.tvDescription
-        holder.tvInstructor.text=currentCourse.tvInstructor
-        holder.tvCourseCode.text=currentCourse.tvCourseCode
+        holder.tvCourseName.text=currentCourse.CourseName
+        holder.tvDescription.text=currentCourse.Description
+        holder.tvInstructor.text=currentCourse.Instructor
+        holder.tvCourseCode.text=currentCourse.CourseCode
+
     }
 
     override fun getItemCount(): Int {
@@ -30,6 +31,6 @@ class CoursesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
     var tvCourseName = itemView.findViewById<TextView>(R.id.tvCourseName)
     var tvDescription = itemView.findViewById<TextView>(R.id.tvDescription)
     var tvInstructor = itemView.findViewById<TextView>(R.id.tvCourseName)
-    var tvCourseCode = itemView.findViewById<TextView>(R.id.tvCode)
+    var tvCourseCode = itemView.findViewById<TextView>(R.id.tvCourseCode)
 }
 

@@ -8,8 +8,8 @@
         <entry key="app/src/main/res/layout/activity_course_details2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_course_details3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_courses.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1578125" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/comments_list_item.xml" value="0.1578125" />
         <entry key="app/src/main/res/layout/course_list_item.xml" value="0.1578125" />
       </map>

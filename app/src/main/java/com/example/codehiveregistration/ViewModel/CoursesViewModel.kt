@@ -9,17 +9,17 @@ import kotlinx.coroutines.launch
 
 class CoursesViewModel:ViewModel() {
     var CoursesLiveData = MutableLiveData<List<CoursesResponse>>()
-    var CoursesFailedLiveData = MutableLiveData<String>()
+    var CoursesErrorLiveData = MutableLiveData<String>()
     var CoursesRepository = CoursesRepository()
 
-    fun CoursesList(){
+    fun getList(){
         viewModelScope.launch {
-            var response = CoursesRepository.Courses()
+            var response = CoursesRepository.getCourses(accessToken)
             if (response.isSuccessful){
-                CoursesLiveData.postValue(response.body())
+                CoursesLiveData.postValue(response.Body()?.string())
             }
             else{
-                CoursesFailedLiveData.postValue(response.errorBody()?.string())
+                CoursesErrorLiveData.postValue(response.errorBody()?.string())
             }
         }
     }

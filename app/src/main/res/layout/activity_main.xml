@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/etDOB"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -14,16 +15,16 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        app:layout_constraintBottom_toBottomOf="@+id/etName1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etName"
+        app:layout_constraintTop_toTopOf="@+id/etName1"
         app:layout_constraintVertical_bias="0.096"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etName"
+        android:id="@+id/etName1"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -34,10 +35,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPhoneNumber"
+            android:id="@+id/etname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name" />
+            android:hint="name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -59,8 +60,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etDOB"
-        app:passwordToggleDrawable="@drawable/ic_baseline_date_range_24"
-        app:passwordToggleEnabled="true"
         android:layout_width="378dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -68,13 +67,16 @@
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/etName">
+        app:layout_constraintTop_toBottomOf="@+id/etName1"
+        app:passwordToggleDrawable="@drawable/ic_baseline_date_range_24"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
 
+            android:id="@+id/etDate_of_birth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="DOB" />
+            android:hint="Date_of_birth" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -212,9 +214,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etphoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PhoneNumber" />
+            android:hint="phoneNumber" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,19 +19,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvEmail"
+        android:id="@+id/etLoginEmail"
         android:layout_width="297dp"
         android:layout_height="37dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="20dp"
         android:text="Email"
-        app:layout_constraintBottom_toTopOf="@+id/tvPassword"
+        app:layout_constraintBottom_toTopOf="@+id/etLoginPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.109" />
 
     <TextView
-        android:id="@+id/tvPassword"
+        android:id="@+id/etLoginPassword"
         android:layout_width="298dp"
         android:layout_height="21dp"
         android:layout_marginTop="61dp"
@@ -41,34 +41,62 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etLoginEmail" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="46dp"
         android:layout_height="46dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
-        app:layout_constraintTop_toTopOf="@+id/tvEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/etLoginEmail"
+        app:layout_constraintTop_toTopOf="@+id/etLoginEmail"
         app:srcCompat="@drawable/ic_baseline_mark_email_read_24"
-        tools:layout_editor_absoluteX="29dp" />
+        tools:layout_editor_absoluteX="29dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="LogIn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPassword"
-        app:layout_constraintVertical_bias="0.547"
-        tools:layout_editor_absoluteX="161dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLoginPassword"
+        app:layout_constraintVertical_bias="0.388"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="49dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/etLoginPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvPassword"
+        app:layout_constraintTop_toTopOf="@+id/etLoginPassword"
         app:srcCompat="@drawable/ic_baseline_https_24" />
+
+    <ProgressBar
+        android:id="@+id/pbLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679" />
+
+    <TextView
+        android:id="@+id/tvLoginError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="LoginError"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogIn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

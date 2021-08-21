@@ -8,19 +8,20 @@ import com.example.codehiveregistration.Repository.UserRepository
 import kotlinx.coroutines.launch
 
 class LoginViewModel:ViewModel() {
-    var LoginLiveData = MutableLiveData<String>()
-    var LoginFailedData = MutableLiveData<String>()
-    var UserRepository = UserRepository()
+
+        var UserRepository = UserRepository()
+        var loginLiveData = MutableLiveData<String>()
+        var loginErrorLiveData = MutableLiveData<String>()
 
 
-    fun Login(LoginRequest:LoginRequest){
+    fun Loginuser(LoginRequest:LoginRequest){
         viewModelScope.launch {
-            var response = UserRepository.Login(LoginRequest,)
+            var response = UserRepository.Login(LoginRequest)
             if (response.isSuccessful){
-                LoginLiveData.postValue(response.body())
+                loginLiveData.postValue(response.body().toString())
             }
             else{
-                LoginFailedData.postValue(response.errorBody()?.string())
+                loginErrorLiveData.postValue(response.errorBody()?.string())
             }
         }
     }
