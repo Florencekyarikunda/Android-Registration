@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.codehiveregistration">
 
     <application
@@ -9,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHiveRegistration">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true" />
         <activity
             android:name=".UI.CourseDetailActivity"
             android:exported="true">
@@ -21,15 +25,10 @@
         <activity
             android:name=".UI.LoginActivity"
             android:exported="true" />
-        <activity android:name=".coursesActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".UI.CoursesActivity" />
         <activity android:name="com.example.registration.ui.MainActivity" />
+    <activity android:name="com.example.registration.ui.MainActivity"
+        tools:ignore="DuplicateActivity,MissingClass"></activity>
     </application>
 
 </manifest>

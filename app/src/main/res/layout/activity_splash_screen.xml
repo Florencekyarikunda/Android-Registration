@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.CourseDetailActivity">
+    tools:context=".SplashScreenActivity"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnCourseDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CourseDetails"
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="355dp"
+        android:layout_height="516dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
-
-         <androidx.constraintlayout.widget.Guideline
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:orientation="horizontal"
-             app:layout_constraintGuide_percent="0.5"/>
-
+        app:srcCompat="@drawable/img" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading..."
+        android:textSize="30sp"
+        android:textColor="#ffff"
+        android:textStyle=""
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

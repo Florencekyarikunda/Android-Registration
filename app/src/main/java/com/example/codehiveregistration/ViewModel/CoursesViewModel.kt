@@ -14,9 +14,9 @@ class CoursesViewModel:ViewModel() {
 
     fun getList(){
         viewModelScope.launch {
-            var response = CoursesRepository.getCourses(accessToken)
+            var response = CoursesRepository.studentCourses(accessToken = String())
             if (response.isSuccessful){
-                CoursesLiveData.postValue(response.Body()?.string())
+//                CoursesLiveData.postValue(response.Body()?.string())
             }
             else{
                 CoursesErrorLiveData.postValue(response.errorBody()?.string())

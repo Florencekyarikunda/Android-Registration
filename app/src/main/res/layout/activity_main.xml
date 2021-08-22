@@ -2,10 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/etDOB"
+    android:id="@+id/etDate_of_birth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UI.LoginActivity"
+    tools:ignore="DuplicateIds">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,6 +25,15 @@
         app:layout_constraintVertical_bias="0.096"
         app:srcCompat="@drawable/ic_baseline_person_24" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText,MissingConstraints">
+
+
+    </TextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etName1"
         android:layout_width="379dp"

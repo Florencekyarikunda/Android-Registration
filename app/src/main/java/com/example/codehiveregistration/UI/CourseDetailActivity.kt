@@ -12,7 +12,7 @@ class CourseDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_course_detail)
         var btnCourseDetails=findViewById<Button>(R.id.btnCourseDetails)
         btnCourseDetails.setOnClickListener {
-            var intent = Intent(baseContext,Login::class.java)
+            var intent = Intent(baseContext,LoginActivity::class.java)
             startActivity(intent)
         }
     }
